@@ -20,7 +20,9 @@ from app01.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^test/',test),
+    url(r'^test/',excel_to_db),
 
-    url(r'^get_data$',get_data)
+    url(r'^get_data$',get_data),
+
+    url(r'^classify/',classify)
 ]

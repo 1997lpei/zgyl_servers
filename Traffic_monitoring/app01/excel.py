@@ -8,7 +8,7 @@ def get_excel(file_path):
     :return:
     """
     df = pd.read_excel(file_path)
-    data = df.ix[:2000].values
+    data = df.ix[:].values
     return data
 
 

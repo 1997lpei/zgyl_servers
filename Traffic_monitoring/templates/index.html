@@ -5,9 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<option>
+<select>
+    <option>请选择云硬盘</option>
+    {% for disk in disk_set %}
+        <option value="{{ disk }}">{{ disk }}</option>
+    {% endfor %}
 
-</option>
+
+</select>
 
 </body>
 </html>
