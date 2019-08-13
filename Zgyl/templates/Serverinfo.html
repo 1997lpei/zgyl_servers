@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript" src="../static/js/Servreinfo.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px 0;
+            background-color: #444;
+        }
+
+        ul, li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            float: left;
+            width: 33%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <canvas id="one" width="200" height="200"><span>111111</span></canvas>
+            <div><span style="color: white">CPU</span></div>
+        </li>
+        <li>
+            <canvas id="two" width="200" height="200"></canvas>
+            <div><span style="color: white">磁盘</span></div>
+        </li>
+        <li>
+            <canvas id="three" width="200" height="200"></canvas>
+            <div><span style="color: white">内存</span></div>
+        </li>
+    </ul>
+</div>
+<script>
+    drawCircle({
+        id: 'one',
+        color: '#0000ff',
+        angle: {{ cpu_info }},
+        lineWidth: 5
+    });
+
+    drawCircle({
+        id: 'two',
+        angle: {{ disk_info }},
+        color: '#ff0000',
+        lineWidth: 12
+    });
+
+    drawCircle({
+        id: 'three',
+        angle: {{ memoty_info }},
+        lineWidth: 15,
+        color: 'grd'
+    });
+</script>
+</body>
+</html>
